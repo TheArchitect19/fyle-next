@@ -42,7 +42,7 @@ const Repositry = ({ username }) => {
                         
                 ))}
                 </div>
-            <div className='flex gap-2'>
+            <div className='flex gap-2' style={{marginLeft:"-2%"}}>
             <button className="w-[8rem] bg-gray-200 text-black p-3  rounded-full" onClick={prevPage} disabled={currentPage === 1}>{"<-  "}Older</button>
             <button className="w-[8rem] bg-blue-700 text-white p-3  rounded-full" onClick={nextPage}>Newer{ "  ->"}</button>
 
