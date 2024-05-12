@@ -23,9 +23,9 @@ const Repositry = ({ username }) => {
             <h2>Repositories for <span className='text-blue-500 uppercase'>{username} </span>:</h2>
             {loading && <p>Loading...</p>}
             
-                <div className='flex flex-wrap'>
+                <div className='flex flex-wrap justify-center items-center'>
                 {repos.map(repo => (
-                    <div  key={repo.id} className='w-1/2'>
+                    <div  key={repo.id} className='w-[45%]'>
                         <div  className='w-[35rem] h-[10rem] border-solid border-2 border-black m-2 p-2'>
                             <Link href={repo.html_url} className=' text-blue-500 uppercase font-extrabold'>{repo.name}</Link>
                             <p>Description: </p>
