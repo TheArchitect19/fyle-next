@@ -19,7 +19,7 @@ const Repositry = ({ username }) => {
     };
 
     return (
-        <div>
+        <div className='flex justify-center items-center w-[90%]'>
             <h2>Repositories for <span className='text-blue-500 uppercase'>{username} </span>:</h2>
             {loading && <p>Loading...</p>}
             
