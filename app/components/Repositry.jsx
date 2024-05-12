@@ -19,7 +19,7 @@ const Repositry = ({ username }) => {
     };
 
     return (
-        <div className='flex justify-center items-center w-[90%]'>
+        <div className='flex flex-col justify-center items-center w-[90%]'>
             <h2>Repositories for <span className='text-blue-500 uppercase'>{username} </span>:</h2>
             {loading && <p>Loading...</p>}
             
@@ -42,9 +42,11 @@ const Repositry = ({ username }) => {
                         
                 ))}
                 </div>
-            
-            <button className="bg-blue-700 text-white p-3 ml-2 rounded-full" onClick={prevPage} disabled={currentPage === 1}>Previous Page</button>
-            <button className="bg-blue-700 text-white p-3 ml-2 rounded-full" onClick={nextPage}>Next Page</button>
+            <div className='flex gap-2'>
+            <button className="w-[8rem] bg-gray-200 text-black p-3  rounded-full" onClick={prevPage} disabled={currentPage === 1}>{"<-  "}Older</button>
+            <button className="w-[8rem] bg-blue-700 text-white p-3  rounded-full" onClick={nextPage}>Newer{ "  ->"}</button>
+
+            </div>
         </div>
     )
 }
