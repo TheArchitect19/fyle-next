@@ -2,14 +2,15 @@
 
 import React from 'react'
 import useGitHubUser from '../hooks/useGithubUser';
+import ProfileSkeleton from './ProfileSkeleton';
 
 
 const Profile = ({ username }) => {
     const { user, loading } = useGitHubUser(username);
     return (
-        <div className=' w-[40rem] h-[15rem] border-double border-4 p-2'>
+        <div className='w-[40rem] h-[15rem] border-double border-4 p-2'>
 
-            {loading && <p>Loading user details...</p>}
+            {loading && <ProfileSkeleton />}
             {user && (
                 <div className="flex row">
                     <img className=" h-[12rem] w-[12rem] rounded-full border-double border-4 border-sky-500" src={user.avatar_url} alt={`${user.login}'s profile`} />
@@ -23,6 +24,7 @@ const Profile = ({ username }) => {
                         {/* Add more user details as needed */}
                     </div>
                 </div>
+                // <ProfileSkeleton />
             )}
         </div>
     );

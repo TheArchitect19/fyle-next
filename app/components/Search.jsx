@@ -10,17 +10,14 @@ const Search = () => {
     const [submitted, setSubmitted] = useState(false);
 
     const handleChange = (e) => {
+        setSubmitted(false);
         setProfile(e.target.value);
         e.preventDefault();
     };
 
     const handleSubmit = () => {
         setSubmitted(true);
-
-
     };
-
-
     return (
         <div className="w-full flex flex-col justify-center items-center">
             <div className=' flex w-1/3 mt-4 items-center justify-center border-slate-950 gap-2 mb-2'>
